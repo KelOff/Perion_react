@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'SamsungSharpSans', sans-serif;
+  background-image: url('./BG.png');
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bottom_logo {
+  position: absolute;
+  font-size: 10px;
+  z-index: 1;
+  left: 30px;
+  bottom: 10px;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 570px) {
+  .container {
+    width: 100%;
+    border: none;
+    height: 70vh;
+    max-width: 1200px;
+    aspect-ratio: auto;
+    overflow: hidden;
+    position: relative;
   }
 }
